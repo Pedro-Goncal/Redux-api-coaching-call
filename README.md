@@ -61,8 +61,13 @@ NOTE - Please jump the steps if you already have any of them installed
 ## Chalanges
 
 > Make a todo list using redux (Please refere to my other coaching call)
+
 > Add to this app - once you are login display a list of users or user by id (Please refere to https://reqres.in/ for the other api)
+
+
 > If you have made the Amazone clone by SONNY that uses contexApi convert it to use redux insted having A userReducer, a cartReducer and a productReduce. 
+
+
 > Surprise us project
 
 ### if you would like some more reference in a e-comerce project please refere to my proshop project [ProShop](https://github.com/Pedro-Goncal/proshop-eCommerce-MERN-client), there you can find an extensive example of redux!
