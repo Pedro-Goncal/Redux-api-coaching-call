@@ -1,70 +1,78 @@
-# Getting Started with Create React App
+# REDUX CLASS PAPA REACT COACHING CALL
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+## Creating a Login and Register Page - Redux async calls - Redux Thunk
 
-## Available Scripts
+In this call we go over how to implent Redux in your React application and how to implent Login and Register functionality and how to store the information in the Redux Store. We talk about the **thunk** Middleware that allows us to use async functionality and how to conditionaly render components based on data in the Redux Store. 
 
-In the project directory, you can run:
+Key aspects: 
+* createStore - used to initialise the store
+* combineReducers - used to combine multiple reducers into the one reducer that the store recives, because the store objects can only be one object, we use the combine reducers so we can devide our code and then combine it into one. 
+* thunk - a middleware pakage that allows us to have async functionality in our Redux Logic. 
+* reducers - a fucntion that alows us to manipulate that piece of state, we use switch case to create diferent ways to manipulate our state.
+* actions - pure javasript function that allows us to have some logic inside of them and then interect with our reducers.
+* dispatch - a Redux function that is used to interact with our reducers. dispatch takes an object that will always have a ``type : "SOMETHING_TO_DO"`` that will match with one of our cases in our reducer. And optional a ``payload: data`` that is how we pass data to the reducer to be stored.
+* useSelector - a hook provided by ``react-redux`` pakage that allows us to access our store in any component in our application.
+* useDispatch - another hook provided by ``react-redux`` pakage that allows us to use ``dispatch`` inside of our functional components. 
 
-### `yarn start`
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
+## Install 
 
-The page will reload if you make edits.\
-You will also see any lint errors in the console.
+NOTE - Please jump the steps if you already have any of them installed
 
-### `yarn test`
+1.  [Install NVM](https://github.com/nvm-sh/nvm)
+	- For windows -  
+		-  **NVM comes with node installation, please proceed to step 2.**
+	- For Linux - 
+		> `curl -o- https://raw.githubusercontent.com/nvm-sh/nvm/v0.37.2/install.sh | bash`
+	- For iOS  - 
+		> `curl -o- https://raw.githubusercontent.com/creationix/nvm/v0.33.0/install.sh | bash`
+	
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+2. [Install node]( https://nodejs.org/en/) (LTS recommended) 
 
-### `yarn build`
+		
+3.  Clone Repo into your machine and change into the directory : 
+	> `$ git clone https://github.com/Pedro-Goncal/passive-perception-client/tree/developmet.git`
+	
+	> `$ cd passive-peception-client`
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+4. Install the required node Modules
+	> `$ npm install`
+	
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+5. Start the development local server
+	 > `$ npm start`
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+#### Pakages used
+* ``redux``
+* ``react-redux``
+* ``redux-thunk``
+* ``redux-devtools-extension``
+* ``axios``
+* ``react-router-dom``
+* ``react-spinkit``
 
-### `yarn eject`
+#### Resources
 
-**Note: this is a one-way operation. Once you `eject`, you can’t go back!**
+> [react-spinkit](https://www.npmjs.com/package/react-spinkit)
+> [API](https://reqres.in/)
 
-If you aren’t satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you’re on your own.
+## Chalanges
 
-You don’t have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn’t feel obligated to use this feature. However we understand that this tool wouldn’t be useful if you couldn’t customize it when you are ready for it.
+> Make a todo list using redux (Please refere to my other coaching call)
+> Add to this app - once you are login display a list of users or user by id (Please refere to https://reqres.in/ for the other api)
+> If you have made the Amazone clone by SONNY that uses contexApi convert it to use redux insted having A userReducer, a cartReducer and a productReduce. 
+> Surprise us project
 
-## Learn More
+### if you would like some more reference in a e-comerce project please refere to my proshop project [ProShop](https://github.com/Pedro-Goncal/proshop-eCommerce-MERN-client), there you can find an extensive example of redux!
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
 
-To learn React, check out the [React documentation](https://reactjs.org/).
 
-### Code Splitting
+### If you have a second I would really appricate a [follow](https://github.com/Pedro-Goncal) on my github and a Star on this project. 
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
+#### For more info please visit my [LinkedIn](https://www.linkedin.com/in/pedro-goncalves88/)
 
-### Analyzing the Bundle Size
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
+#### This is part of the PAPA - React Zero to Hero [Course](https://www.papareact.com/) where I am a Success Coach and part of a great comunity where we all help each other in the crazy journey that is Becoming a Professional Developer. 
 
-### Making a Progressive Web App
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `yarn build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
